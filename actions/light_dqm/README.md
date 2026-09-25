@@ -7,7 +7,7 @@ to it yet.
 
 ## What this is
 
-`light_dqm.py` does two things in one ~1700-line script: it computes and
+`light_dqm.py` does two things in one script: it computes and
 plots DQM quantities from a light-readout file, and it has no path to
 Grafana at all. This folder now also has a lighter skeleton version of the
 same script, restructured so the "take in a file → build a PDF" scaffolding
@@ -45,7 +45,7 @@ fully ported (used as the worked example for the rest). Everything else
 
 Until these are copied over from `light_dqm.py`, running the skeleton will
 produce a PDF, but every plot in it will be a placeholder page saying that
-plot failed — the import itself currently fails as a whole (Python's
+plot failed - the import itself currently fails as a whole (Python's
 `from module import (a, b, c, ...)` is all-or-nothing), so even the two
 finished functions aren't actually being used yet.
 
@@ -73,8 +73,7 @@ Grafana push and just build the PDF/JSON output.
 ## Not done yet
 
 - Port the remaining functions into `light_dqm_funcs.py`.
-- Install `influxdb`/`pyyaml` and test `grafana_metrics.py` against the
-  real InfluxDB instance.
+- Test `grafana_metrics.py` against the real InfluxDB instance.
 - End-to-end test against a real `.FLOW.hdf5` file, comparing output
   against `light_dqm.py`'s.
 
