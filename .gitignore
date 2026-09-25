@@ -1,5 +1,7 @@
 FW_config.yaml
 my_launchpad.yaml
+grafana_config.yaml
 _install
 __pycache__
 pyrightconfig.json
+.DS_Store

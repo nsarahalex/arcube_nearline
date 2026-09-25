@@ -1,0 +1,18 @@
+# Connection details for the InfluxDB instance backing the light-DQM
+# Grafana dashboards.
+#
+# Like FW_config.yaml / my_launchpad.yaml, this template gets copied to
+# config/grafana_config.yaml (see admin/install.sh) and filled in with real
+# values there. config/grafana_config.yaml is gitignored - only this
+# template, with placeholder values, is committed.
+
+URL: http://example-influxdb-host.local
+PORT: 8086
+NAME: light_dqm
+# Host used for a quick reachability check before attempting to write,
+# so a flaky/absent DAQ network connection fails fast instead of hanging.
+PINGIP: 0.0.0.0
+
+# Only needed if the InfluxDB instance requires auth; leave both null otherwise.
+USERNAME: null
+PASSWORD: null
